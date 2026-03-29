@@ -3,6 +3,9 @@ import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminMarks(){
 
 const [subjects,setSubjects] = useState([]);
@@ -20,7 +23,7 @@ loadStudents();
 // LOAD SUBJECTS
 function loadSubjects(){
 
-axios.get("http://localhost:8085/api/subjects/all")
+axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
 .then(res=>setSubjects(res.data))
 .catch(err=>console.log(err));
 
@@ -30,7 +33,7 @@ axios.get("http://localhost:8085/api/subjects/all")
 // LOAD ALL STUDENTS
 function loadStudents(){
 
-axios.get("http://localhost:8085/api/students/all")
+axios.get(`${BASE_URL}/api/students/all`)   // ✅ FIXED
 .then(res=>{
 
 setStudents(res.data);
@@ -51,9 +54,7 @@ setMarks(marksData);
 
 // SUBJECT CHANGE
 function handleSubjectChange(e){
-
 setSelectedSubject(e.target.value);
-
 }
 
 
@@ -86,7 +87,7 @@ examType:examType
 }));
 
 axios.post(
-"http://localhost:8085/api/marks/addAll",
+`${BASE_URL}/api/marks/addAll`,   // ✅ FIXED
 marksList
 )
 
@@ -114,7 +115,6 @@ return(
 Marks Management
 </h1>
 
-
 <div className="subject-form-row">
 
 <select
@@ -134,7 +134,6 @@ onChange={handleSubjectChange}
 
 </select>
 
-
 <select
 value={examType}
 onChange={(e)=>setExamType(e.target.value)}
@@ -147,8 +146,6 @@ onChange={(e)=>setExamType(e.target.value)}
 </select>
 
 </div>
-
-
 
 <div className="subject-table-box">
 
@@ -170,14 +167,12 @@ onChange={(e)=>setExamType(e.target.value)}
 <td>{student.studentName}</td>
 
 <td>
-
 <input
 type="number"
 placeholder="Enter Marks"
 value={marks[student.id] || ""}
 onChange={(e)=>handleMarksChange(student.id,e.target.value)}
 />
-
 </td>
 
 </tr>
@@ -190,7 +185,6 @@ onChange={(e)=>handleMarksChange(student.id,e.target.value)}
 
 </div>
 
-
 <button
 className="save-btn"
 onClick={saveMarks}
@@ -198,7 +192,6 @@ style={{marginTop:"20px"}}
 >
 Save Marks
 </button>
-
 
 </div>
 

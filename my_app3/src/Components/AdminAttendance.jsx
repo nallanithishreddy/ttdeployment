@@ -3,6 +3,9 @@ import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminAttendance() {
 
   const [subjects, setSubjects] = useState([]);
@@ -15,17 +18,15 @@ function AdminAttendance() {
     getSubjects();
   }, []);
 
-  // GET SUBJECTS
   function getSubjects() {
-    axios.get("http://localhost:8085/api/subjects/all")
+    axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
       .then(res => setSubjects(res.data))
       .catch(err => console.error(err));
   }
 
-  // LOAD ALL STUDENTS
   function loadStudents() {
 
-    axios.get("http://localhost:8085/api/students/all")
+    axios.get(`${BASE_URL}/api/students/all`)   // ✅ FIXED
       .then(res => {
 
         setStudents(res.data);
@@ -42,7 +43,6 @@ function AdminAttendance() {
       .catch(err => console.error(err));
   }
 
-  // SUBJECT CHANGE
   function handleSubjectChange(e) {
 
     const subject = e.target.value;
@@ -55,7 +55,6 @@ function AdminAttendance() {
 
   }
 
-  // MARK SINGLE STUDENT
   function markAttendance(studentId, status) {
 
     setAttendance(prev => ({
@@ -65,7 +64,6 @@ function AdminAttendance() {
 
   }
 
-  // ⭐ MARK ALL PRESENT
   function markAllPresent() {
 
     const updatedAttendance = {};
@@ -78,7 +76,6 @@ function AdminAttendance() {
 
   }
 
-  // SAVE ATTENDANCE
   function saveAttendance() {
 
     if (!selectedSubject || !date) {
@@ -93,7 +90,7 @@ function AdminAttendance() {
       status: attendance[student.id] || "Present"
     }));
 
-    axios.post("http://localhost:8085/api/attendance/addAll", attendanceList)
+    axios.post(`${BASE_URL}/api/attendance/addAll`, attendanceList)  // ✅ FIXED
       .then(() => {
         alert("Attendance Saved Successfully");
       })
@@ -114,15 +111,12 @@ function AdminAttendance() {
           Attendance Management
         </h1>
 
-        {/* SUBJECT + DATE */}
-
         <div className="subject-form-row">
 
           <select
             value={selectedSubject}
             onChange={handleSubjectChange}
           >
-
             <option value="">Select Subject</option>
 
             {subjects.map(sub => (
@@ -130,7 +124,6 @@ function AdminAttendance() {
                 {sub.subjectName}
               </option>
             ))}
-
           </select>
 
           <input
@@ -138,8 +131,6 @@ function AdminAttendance() {
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
-
-          {/* MARK ALL PRESENT BUTTON */}
 
           <button
             onClick={markAllPresent}
@@ -149,8 +140,6 @@ function AdminAttendance() {
           </button>
 
         </div>
-
-        {/* STUDENT TABLE */}
 
         <div className="subject-table-box">
 
@@ -211,8 +200,6 @@ function AdminAttendance() {
           </table>
 
         </div>
-
-        {/* SAVE BUTTON */}
 
         <button
           className="save-btn"

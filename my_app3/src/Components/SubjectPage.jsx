@@ -1,5 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import "../App.css";
+
+// ✅ BASE URL
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
 
 function SubjectPage() {
 
@@ -11,9 +15,8 @@ function SubjectPage() {
   const [subjects, setSubjects] = useState([]);
   const [searchName, setSearchName] = useState("");
 
-  // ADD SUBJECT
   function addSubject() {
-    axios.post("http://localhost:2011/api/subjects/add", subject)
+    axios.post(`${BASE_URL}/api/subjects/add`, subject)   // ✅ FIXED
       .then(() => {
         alert("Subject Added");
         setSubject({ subjectName: "", subjectCode: "" });
@@ -21,21 +24,18 @@ function SubjectPage() {
       });
   }
 
-  // GET ALL SUBJECTS
   function getAllSubjects() {
-    axios.get("http://localhost:2011/api/subjects/all")
+    axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
       .then(res => setSubjects(res.data));
   }
 
-  // SEARCH SUBJECT
   function searchSubject() {
-    axios.get(`http://localhost:2011/api/subjects/search/${searchName}`)
+    axios.get(`${BASE_URL}/api/subjects/search/${searchName}`)   // ✅ FIXED
       .then(res => setSubjects(res.data));
   }
 
-  // DELETE SUBJECT
   function deleteSubject(id) {
-    axios.delete(`http://localhost:2011/api/subjects/delete/${id}`)
+    axios.delete(`${BASE_URL}/api/subjects/delete/${id}`)   // ✅ FIXED
       .then(() => {
         alert("Deleted");
         getAllSubjects();
@@ -47,19 +47,22 @@ function SubjectPage() {
 
       <h2>Subject Management</h2>
 
-      {/* ADD SUBJECT */}
       <input
         type="text"
         placeholder="Subject Name"
         value={subject.subjectName}
-        onChange={(e) => setSubject({ ...subject, subjectName: e.target.value })}
+        onChange={(e) =>
+          setSubject({ ...subject, subjectName: e.target.value })
+        }
       />
 
       <input
         type="text"
         placeholder="Subject Code"
         value={subject.subjectCode}
-        onChange={(e) => setSubject({ ...subject, subjectCode: e.target.value })}
+        onChange={(e) =>
+          setSubject({ ...subject, subjectCode: e.target.value })
+        }
       />
 
       <button onClick={addSubject}>Add Subject</button>
@@ -67,7 +70,6 @@ function SubjectPage() {
 
       <hr />
 
-      {/* SEARCH SUBJECT */}
       <div className="search-box">
         <input
           type="text"
@@ -77,8 +79,8 @@ function SubjectPage() {
         <button onClick={searchSubject}>Search</button>
       </div>
 
-      {/* SUBJECT TABLE */}
       <table className="users-table">
+
         <thead>
           <tr>
             <th>ID</th>
@@ -89,16 +91,20 @@ function SubjectPage() {
         </thead>
 
         <tbody>
+
           {subjects.map((s) => (
             <tr key={s.id}>
               <td>{s.id}</td>
               <td>{s.subjectName}</td>
               <td>{s.subjectCode}</td>
               <td>
-                <button onClick={() => deleteSubject(s.id)}>Delete</button>
+                <button onClick={() => deleteSubject(s.id)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
+
         </tbody>
 
       </table>

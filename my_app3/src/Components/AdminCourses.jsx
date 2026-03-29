@@ -3,11 +3,13 @@ import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminCourses() {
 
   const [courseName, setCourseName] = useState("");
   const [courseCode, setCourseCode] = useState("");
-
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ function AdminCourses() {
   }, []);
 
   function loadCourses() {
-    axios.get("http://localhost:8085/api/courses/all")
+    axios.get(`${BASE_URL}/api/courses/all`)   // ✅ FIXED
       .then(res => setCourses(res.data))
       .catch(err => console.log(err));
   }
@@ -28,11 +30,11 @@ function AdminCourses() {
     }
 
     const newCourse = {
-      courseName: courseName,
-      courseCode: courseCode
+      courseName,
+      courseCode
     };
 
-    axios.post("http://localhost:8085/api/courses/add", newCourse)
+    axios.post(`${BASE_URL}/api/courses/add`, newCourse)   // ✅ FIXED
       .then(() => {
 
         alert("Course Added");
@@ -50,7 +52,7 @@ function AdminCourses() {
 
     if (window.confirm("Delete this course?")) {
 
-      axios.delete("http://localhost:8085/api/courses/delete/" + id)
+      axios.delete(`${BASE_URL}/api/courses/delete/${id}`)  // ✅ FIXED
         .then(() => loadCourses());
 
     }
@@ -66,9 +68,6 @@ function AdminCourses() {
         <h1 className="subject-title">
           Course Management
         </h1>
-
-
-        {/* INPUT ROW */}
 
         <div className="subject-form-row">
 
@@ -92,9 +91,6 @@ function AdminCourses() {
 
         </div>
 
-
-        {/* TABLE */}
-
         <div className="subject-table-box">
 
           <table className="subjects-table">
@@ -113,7 +109,6 @@ function AdminCourses() {
               {courses.map(c => (
 
                 <tr key={c.id}>
-
                   <td>{c.id}</td>
                   <td>{c.courseName}</td>
                   <td>{c.courseCode}</td>
@@ -126,7 +121,6 @@ function AdminCourses() {
                       Delete
                     </button>
                   </td>
-
                 </tr>
 
               ))}
@@ -138,7 +132,6 @@ function AdminCourses() {
         </div>
 
       </div>
-
     </>
   );
 }

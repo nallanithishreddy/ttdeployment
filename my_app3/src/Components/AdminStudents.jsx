@@ -15,6 +15,9 @@ Cell
 
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminStudents(){
 
 const [students,setStudents]=useState([]);
@@ -47,64 +50,43 @@ loadSubjects();
 },[]);
 
 /* LOAD STUDENTS */
-
 function loadStudents(){
-
-axios.get("http://localhost:8085/api/students/all")
+axios.get(`${BASE_URL}/api/students/all`)   // ✅ FIXED
 .then(res=>setStudents(res.data))
 .catch(err=>console.log(err));
-
 }
 
 /* LOAD SUBJECTS */
-
 function loadSubjects(){
-
-axios.get("http://localhost:8085/api/subjects/all")
+axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
 .then(res=>setSubjects(res.data))
 .catch(err=>console.log(err));
-
 }
 
 /* SEARCH STUDENT */
-
 function searchStudent(){
-
-axios.get("http://localhost:8085/api/students/search?name="+search)
-
+axios.get(`${BASE_URL}/api/students/search?name=${search}`)   // ✅ FIXED
 .then(res=>{
-
 if(res.data.length===0){
 alert("Student not found");
 return;
 }
-
 selectStudent(res.data[0]);
-
 })
-
 .catch(err=>console.log(err));
-
 }
 
 /* SELECT STUDENT */
-
 function selectStudent(student){
-
 setSelectedId(student.id);
 setStudentData(student);
-
 loadStudentMarks(student.id);
 loadStudentAttendance(student.studentName);
-
 }
 
 /* LOAD MARKS */
-
 function loadStudentMarks(id){
-
-axios.get("http://localhost:8085/api/marks/student/"+id)
-
+axios.get(`${BASE_URL}/api/marks/student/${id}`)   // ✅ FIXED
 .then(res=>{
 
 const records=res.data;
@@ -115,20 +97,14 @@ setCgpa("-");
 return;
 }
 
-/* SUBJECT MAP */
-
 const subjectMap={};
-
 subjects.forEach(s=>{
 subjectMap[s.id]=s.subjectName;
 });
 
-/* GROUP SUBJECT MARKS */
-
 const subjectMarks={};
 
 records.forEach(m=>{
-
 const subject=subjectMap[m.subjectId] || ("Subject "+m.subjectId);
 
 if(!subjectMarks[subject]){
@@ -137,52 +113,38 @@ subjectMarks[subject]={total:0,count:0};
 
 subjectMarks[subject].total+=m.marks;
 subjectMarks[subject].count++;
-
 });
 
-/* GRAPH DATA */
-
 const graphData=Object.keys(subjectMarks).map(sub=>{
-
 const data=subjectMarks[sub];
-
 const avg=(data.total/data.count).toFixed(2);
 
 return{
 subject:sub,
 marks:Number(avg)
 };
-
 });
 
 setMarksGraph(graphData);
 
 /* CGPA */
-
 let total=0;
-
 records.forEach(m=>{
 total+=m.marks;
 });
 
 const avg=total/records.length;
-
 const cgpaValue=(avg/10).toFixed(2);
 
 setCgpa(cgpaValue);
 
 })
-
 .catch(err=>console.log(err));
-
 }
 
 /* LOAD ATTENDANCE */
-
 function loadStudentAttendance(studentName){
-
-axios.get("http://localhost:8085/api/attendance/student/"+studentName)
-
+axios.get(`${BASE_URL}/api/attendance/student/${studentName}`)   // ✅ FIXED
 .then(res=>{
 
 const records=res.data;
@@ -196,7 +158,6 @@ return;
 const subjectMap={};
 
 records.forEach(r=>{
-
 if(!subjectMap[r.subjectName]){
 subjectMap[r.subjectName]={total:0,present:0};
 }
@@ -206,54 +167,41 @@ subjectMap[r.subjectName].total++;
 if(r.status==="Present"){
 subjectMap[r.subjectName].present++;
 }
-
 });
 
-/* GRAPH DATA */
-
 const graphData=Object.keys(subjectMap).map(sub=>{
-
 const data=subjectMap[sub];
-
 const percent=((data.present/data.total)*100).toFixed(2);
 
 return{
 subject:sub,
 attendance:Number(percent)
 };
-
 });
 
 setAttendanceGraph(graphData);
 
 /* AVG ATTENDANCE */
-
 let totalPercent=0;
-
 graphData.forEach(g=>{
 totalPercent+=g.attendance;
 });
 
 const avg=(totalPercent/graphData.length).toFixed(2);
-
 setAvgAttendance(avg);
 
 })
-
 .catch(err=>console.log(err));
-
 }
 
 return(
 
 <>
-
 <AdminNavbar/>
 
 <div className="students-page">
 
-{/* LEFT STUDENT LIST */}
-
+{/* LEFT LIST */}
 <div className="students-list-box">
 
 <h3>All Students</h3>
@@ -267,9 +215,7 @@ key={s.id}
 className={`student-item ${selectedId===s.id ? "active-student" : ""}`}
 onClick={()=>selectStudent(s)}
 >
-
 {s.studentName}
-
 </div>
 
 ))}
@@ -279,11 +225,9 @@ onClick={()=>selectStudent(s)}
 </div>
 
 {/* RIGHT SIDE */}
-
 <div className="student-details">
 
 {/* SEARCH */}
-
 <div className="search-box">
 
 <input
@@ -299,8 +243,7 @@ Search
 
 </div>
 
-{/* STUDENT INFO */}
-
+{/* INFO */}
 <div className="student-info-cards">
 
 <div className="info-card">
@@ -326,69 +269,44 @@ Search
 </div>
 
 {/* GRAPHS */}
-
 <div className="student-graphs">
-
-{/* MARKS GRAPH */}
 
 <div className="graph-box">
 
 <h3>Subject Wise Marks</h3>
 
 <ResponsiveContainer width="100%" height={250}>
-
 <BarChart data={marksGraph}>
-
 <CartesianGrid strokeDasharray="3 3"/>
-
 <XAxis dataKey="subject"/>
-
 <YAxis/>
-
 <Tooltip/>
-
 <Bar dataKey="marks">
-
 {marksGraph.map((entry,index)=>(
 <Cell key={index} fill={colors[index % colors.length]}/>
 ))}
-
 </Bar>
-
 </BarChart>
-
 </ResponsiveContainer>
 
 </div>
-
-{/* ATTENDANCE GRAPH */}
 
 <div className="graph-box">
 
 <h3>Subject Wise Attendance</h3>
 
 <ResponsiveContainer width="100%" height={250}>
-
 <BarChart data={attendanceGraph}>
-
 <CartesianGrid strokeDasharray="3 3"/>
-
 <XAxis dataKey="subject"/>
-
 <YAxis/>
-
 <Tooltip/>
-
 <Bar dataKey="attendance">
-
 {attendanceGraph.map((entry,index)=>(
 <Cell key={index} fill={colors[index % colors.length]}/>
 ))}
-
 </Bar>
-
 </BarChart>
-
 </ResponsiveContainer>
 
 </div>

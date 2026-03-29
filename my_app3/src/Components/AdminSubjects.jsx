@@ -3,6 +3,9 @@ import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminSubjects() {
 
   const [subjectName, setSubjectName] = useState("");
@@ -16,7 +19,7 @@ function AdminSubjects() {
   }, []);
 
   function loadSubjects() {
-    axios.get("http://localhost:8085/api/subjects/all")
+    axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
       .then(res => setSubjects(res.data))
       .catch(err => console.log(err));
   }
@@ -29,12 +32,12 @@ function AdminSubjects() {
     }
 
     const newSubject = {
-      subjectName: subjectName,
-      subjectCode: subjectCode,
-      courseName: courseName
+      subjectName,
+      subjectCode,
+      courseName
     };
 
-    axios.post("http://localhost:8085/api/subjects/add", newSubject)
+    axios.post(`${BASE_URL}/api/subjects/add`, newSubject)   // ✅ FIXED
       .then(() => {
 
         alert("Subject Added");
@@ -53,7 +56,7 @@ function AdminSubjects() {
 
     if (window.confirm("Delete this subject?")) {
 
-      axios.delete("http://localhost:8085/api/subjects/delete/" + id)
+      axios.delete(`${BASE_URL}/api/subjects/delete/${id}`)   // ✅ FIXED
         .then(() => loadSubjects());
 
     }
@@ -69,9 +72,6 @@ function AdminSubjects() {
         <h1 className="subject-title">
           Subject Management
         </h1>
-
-
-        {/* INPUT ROW */}
 
         <div className="subject-form-row">
 
@@ -101,9 +101,6 @@ function AdminSubjects() {
           </button>
 
         </div>
-
-
-        {/* TABLE */}
 
         <div className="subject-table-box">
 
@@ -150,7 +147,6 @@ function AdminSubjects() {
         </div>
 
       </div>
-
     </>
   );
 }

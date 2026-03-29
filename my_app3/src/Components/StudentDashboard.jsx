@@ -15,6 +15,8 @@ import {
 
 import "../App.css";
 
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function StudentDashboard() {
 
   const [user, setUser] = useState(null);
@@ -58,44 +60,37 @@ function StudentDashboard() {
     }
   }, [subjects, marks, attendance]);
 
-  // ================= FETCH =================
-
   const loadSubjects = async () => {
-    const res = await axios.get("http://localhost:8085/api/subjects/all");
+    const res = await axios.get(`${BASE_URL}/api/subjects/all`);
     setSubjects(res.data || []);
   };
 
   const fetchMarks = async (username) => {
     const res = await axios.get(
-      `http://localhost:8085/api/marks/student/username/${username}`
+      `${BASE_URL}/api/marks/student/username/${username}`
     );
     setMarks(res.data || []);
   };
 
   const fetchAttendance = async (username) => {
     const res = await axios.get(
-      `http://localhost:8085/api/attendance/student/${username}`
+      `${BASE_URL}/api/attendance/student/${username}`
     );
     setAttendance(res.data || []);
   };
 
   const loadAnnouncements = async () => {
-    const res = await axios.get("http://localhost:8085/api/notes/all");
+    const res = await axios.get(`${BASE_URL}/api/notes/all`);
     setAnnouncements(res.data || []);
   };
-
-  // ================= MARKS =================
 
   const calculateMarks = () => {
 
     let sum = 0;
-    marks.forEach(m => {
-      sum += (m.marks || 0);
-    });
+    marks.forEach(m => sum += (m.marks || 0));
 
     const avg = marks.length === 0 ? 0 : (sum / marks.length);
 
-    // ✅ CGPA (OUT OF 10)
     const cgpaValue = (avg / 10).toFixed(2);
     setCgpa(cgpaValue);
 
@@ -104,14 +99,10 @@ function StudentDashboard() {
       const records = marks.filter(m => m.subjectId === sub.id);
 
       let total = 0;
-      records.forEach(r => {
-        total += (r.marks || 0);
-      });
+      records.forEach(r => total += (r.marks || 0));
 
       const avgMarks =
-        records.length === 0
-          ? 0
-          : (total / records.length).toFixed(2);
+        records.length === 0 ? 0 : (total / records.length).toFixed(2);
 
       return {
         subject: sub.subjectName,
@@ -121,8 +112,6 @@ function StudentDashboard() {
 
     setMarksGraph(graph);
   };
-
-  // ================= ATTENDANCE =================
 
   const calculateAttendance = () => {
 
@@ -180,7 +169,6 @@ function StudentDashboard() {
           <h1>Student Dashboard</h1>
         </div>
 
-        {/* STATS */}
         <div className="stats-row">
 
           <div className="stat-box">
@@ -188,7 +176,6 @@ function StudentDashboard() {
             <p>{overallAttendance}%</p>
           </div>
 
-          {/* ✅ FIXED CGPA UI */}
           <div className="stat-box">
             <h3>CGPA</h3>
             <p>{cgpa}</p>
@@ -201,78 +188,28 @@ function StudentDashboard() {
 
         </div>
 
-        {/* ANNOUNCEMENTS + LOW ATTENDANCE */}
         <div className="graphs-row">
 
           <div className="graph-box">
             <h3>📢 Announcements</h3>
 
-            <div style={{ maxHeight: "200px", overflowY: "auto" }}>
-              {announcements.length === 0 ? (
-                <p>No announcements</p>
-              ) : (
-                announcements.slice(-5).reverse().map(a => (
-                  <div key={a.id} className="announcement-item">
-                    <h4>{a.title}</h4>
-                    <p>{a.message}</p>
-                  </div>
-                ))
-              )}
-            </div>
+            {announcements.slice(-5).reverse().map(a => (
+              <div key={a.id}>
+                <h4>{a.title}</h4>
+                <p>{a.message}</p>
+              </div>
+            ))}
           </div>
 
           <div className="graph-box">
             <h3 style={{ color: "red" }}>⚠ Low Attendance</h3>
 
-            {lowAttendanceSubjects.length === 0 ? (
-              <p>All Good ✅</p>
-            ) : (
-              lowAttendanceSubjects.map((l, i) => (
-                <p key={i} style={{ color: "red" }}>
-                  {l.subject} - {l.percent}%
-                </p>
-              ))
-            )}
+            {lowAttendanceSubjects.map((l, i) => (
+              <p key={i}>
+                {l.subject} - {l.percent}%
+              </p>
+            ))}
 
-          </div>
-
-        </div>
-
-        {/* GRAPHS */}
-        <div className="graphs-row">
-
-          <div className="graph-box">
-            <h3>Subject-wise Marks</h3>
-
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={marksGraph}>
-                <XAxis dataKey="subject" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="marks">
-                  {marksGraph.map((_, i) => (
-                    <Cell key={i} fill={colors[i % colors.length]} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-
-          <div className="graph-box">
-            <h3>Subject-wise Attendance</h3>
-
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={attendanceGraph}>
-                <XAxis dataKey="subject" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="percent">
-                  {attendanceGraph.map((_, i) => (
-                    <Cell key={i} fill={colors[i % colors.length]} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
           </div>
 
         </div>

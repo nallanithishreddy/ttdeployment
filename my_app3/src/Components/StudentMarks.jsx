@@ -3,6 +3,9 @@ import axios from "axios";
 import StudentNavbar from "./StudentNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function StudentMarks() {
 
   const [subjects, setSubjects] = useState([]);
@@ -28,29 +31,17 @@ function StudentMarks() {
 
   }, []);
 
-  // ================= FETCH =================
-
   const loadSubjects = async () => {
-    try {
-      const res = await axios.get("http://localhost:8085/api/subjects/all");
-      setSubjects(res.data);
-    } catch (err) {
-      console.log(err);
-    }
+    const res = await axios.get(`${BASE_URL}/api/subjects/all`);   // ✅ FIXED
+    setSubjects(res.data);
   };
 
   const fetchMarks = async (username) => {
-    try {
-      const res = await axios.get(
-        `http://localhost:8085/api/marks/student/username/${username}`
-      );
-      setMarks(res.data);
-    } catch (err) {
-      console.log(err);
-    }
+    const res = await axios.get(
+      `${BASE_URL}/api/marks/student/username/${username}`   // ✅ FIXED
+    );
+    setMarks(res.data);
   };
-
-  // ================= CALCULATE =================
 
   useEffect(() => {
     if (subjects.length === 0) return;
@@ -59,34 +50,21 @@ function StudentMarks() {
 
   const calculateStats = () => {
 
-    // ===== CGPA =====
-    let total = marks.length;
-
     let sum = 0;
-    marks.forEach(m => {
-      sum += (m.marks || 0);   // ✅ FIXED HERE
-    });
+    marks.forEach(m => sum += (m.marks || 0));
 
-    const avg = total === 0 ? 0 : (sum / total).toFixed(2);
-
+    const avg = marks.length === 0 ? 0 : (sum / marks.length).toFixed(2);
     setCgpa(avg);
 
-    // ===== SUBJECT-WISE =====
     const stats = subjects.map(sub => {
 
-      const records = marks.filter(
-        m => m.subjectId === sub.id   // ✅ MORE RELIABLE THAN NAME
-      );
+      const records = marks.filter(m => m.subjectId === sub.id);
 
       let totalMarks = 0;
-      records.forEach(r => {
-        totalMarks += (r.marks || 0);  // ✅ FIXED HERE
-      });
+      records.forEach(r => totalMarks += (r.marks || 0));
 
       const avgMarks =
-        records.length === 0
-          ? 0
-          : (totalMarks / records.length).toFixed(2);
+        records.length === 0 ? 0 : (totalMarks / records.length).toFixed(2);
 
       return {
         subject: sub.subjectName,
@@ -97,16 +75,11 @@ function StudentMarks() {
     setSubjectStats(stats);
   };
 
-  // ================= CLICK =================
-
   const handleClick = (subject, subjectId) => {
 
     setSelectedSubject(subject);
 
-    const filtered = marks.filter(
-      m => m.subjectId === subjectId   // ✅ FIXED HERE
-    );
-
+    const filtered = marks.filter(m => m.subjectId === subjectId);
     setFilteredMarks(filtered);
   };
 
@@ -118,7 +91,6 @@ function StudentMarks() {
 
         <h1 className="subject-title">My Marks</h1>
 
-        {/* ===== CGPA CARD ===== */}
         <div className="subject-table-box" style={{ marginBottom: "20px" }}>
           <h3 style={{ textAlign: "center" }}>Overall CGPA / Average</h3>
           <h2 style={{ textAlign: "center", color: "#22c55e" }}>
@@ -126,7 +98,6 @@ function StudentMarks() {
           </h2>
         </div>
 
-        {/* ===== SUBJECT TABLE ===== */}
         <div className="subject-table-box">
 
           <table className="subjects-table">
@@ -164,7 +135,6 @@ function StudentMarks() {
 
         </div>
 
-        {/* ===== DETAILS ===== */}
         {selectedSubject && (
           <div className="subject-table-box" style={{ marginTop: "25px" }}>
 
@@ -189,7 +159,7 @@ function StudentMarks() {
                   filteredMarks.map((m, i) => (
                     <tr key={i}>
                       <td>{m.examType}</td>
-                      <td>{m.marks}</td> {/* ✅ FIXED */}
+                      <td>{m.marks}</td>
                     </tr>
                   ))
                 )}

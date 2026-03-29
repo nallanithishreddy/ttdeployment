@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function Attendance() {
 
   useEffect(() => {
@@ -21,35 +24,55 @@ function Attendance() {
 
   const [records, setRecords] = useState([]);
 
+  // MARK ATTENDANCE
   function markAttendance() {
-    axios.post("http://localhost:2011/api/attendance/mark", attendance)
+    axios.post(`${BASE_URL}/api/attendance/mark`, attendance)   // ✅ FIXED
       .then(() => {
         alert("Attendance Marked");
         getAllAttendance();
+      })
+      .catch(err => {
+        console.log(err);
+        alert("Error marking attendance");
       });
   }
 
+  // GET ALL
   function getAllAttendance() {
-    axios.get("http://localhost:2011/api/attendance/all")
-      .then(res => setRecords(res.data));
+    axios.get(`${BASE_URL}/api/attendance/all`)   // ✅ FIXED
+      .then(res => setRecords(res.data))
+      .catch(err => console.log(err));
   }
 
+  // DELETE
   function deleteAttendance(id) {
-    axios.delete(`http://localhost:2011/api/attendance/delete/${id}`)
-      .then(() => getAllAttendance());
+    axios.delete(`${BASE_URL}/api/attendance/delete/${id}`)   // ✅ FIXED
+      .then(() => getAllAttendance())
+      .catch(err => console.log(err));
   }
 
   return (
     <div className="dashboard-container">
       <h2>Attendance Management</h2>
 
-      <input placeholder="Roll No" onChange={e => setAttendance({ ...attendance, rollNo: e.target.value })} />
-      <input placeholder="Student Name" onChange={e => setAttendance({ ...attendance, studentName: e.target.value })} />
-      <input placeholder="Course Name" onChange={e => setAttendance({ ...attendance, courseName: e.target.value })} />
-      <input placeholder="Subject Name" onChange={e => setAttendance({ ...attendance, subjectName: e.target.value })} />
-      <input type="date" onChange={e => setAttendance({ ...attendance, date: e.target.value })} />
+      <input placeholder="Roll No"
+        onChange={e => setAttendance({ ...attendance, rollNo: e.target.value })} />
 
-      <select onChange={e => setAttendance({ ...attendance, status: e.target.value })}>
+      <input placeholder="Student Name"
+        onChange={e => setAttendance({ ...attendance, studentName: e.target.value })} />
+
+      <input placeholder="Course Name"
+        onChange={e => setAttendance({ ...attendance, courseName: e.target.value })} />
+
+      <input placeholder="Subject Name"
+        onChange={e => setAttendance({ ...attendance, subjectName: e.target.value })} />
+
+      <input type="date"
+        onChange={e => setAttendance({ ...attendance, date: e.target.value })} />
+
+      <select
+        onChange={e => setAttendance({ ...attendance, status: e.target.value })}
+      >
         <option>Present</option>
         <option>Absent</option>
       </select>
@@ -68,6 +91,7 @@ function Attendance() {
             <th>Action</th>
           </tr>
         </thead>
+
         <tbody>
           {records.map(a => (
             <tr key={a.id}>
@@ -77,11 +101,14 @@ function Attendance() {
               <td>{a.subjectName}</td>
               <td>{a.status}</td>
               <td>
-                <button onClick={() => deleteAttendance(a.id)}>Delete</button>
+                <button onClick={() => deleteAttendance(a.id)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
+
       </table>
     </div>
   );

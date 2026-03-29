@@ -3,6 +3,9 @@ import axios from "axios";
 import StudentNavbar from "./StudentNavbar";
 import "../App.css";
 
+// ✅ BASE URL
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function StudentSubjects() {
 
   const [subjects, setSubjects] = useState([]);
@@ -12,7 +15,7 @@ function StudentSubjects() {
   }, []);
 
   function loadSubjects() {
-    axios.get("http://localhost:8085/api/subjects/all")
+    axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
       .then(res => setSubjects(res.data))
       .catch(err => console.log(err));
   }
@@ -26,8 +29,6 @@ function StudentSubjects() {
         <h1 className="subject-title">
           My Subjects
         </h1>
-
-        {/* TABLE */}
 
         <div className="subject-table-box">
 

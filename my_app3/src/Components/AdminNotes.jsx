@@ -3,6 +3,9 @@ import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
 import "../App.css";
 
+// ✅ ADD THIS
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AdminNotes(){
 
 const [title,setTitle] = useState("");
@@ -17,12 +20,10 @@ loadMaterials();
 // LOAD MATERIALS
 function loadMaterials(){
 
-axios.get("http://localhost:8085/api/materials/all")
-
+axios.get(`${BASE_URL}/api/materials/all`)   // ✅ FIXED
 .then(res=>{
 setMaterials(res.data);
 })
-
 .catch(err=>console.log(err));
 
 }
@@ -41,7 +42,7 @@ formData.append("title",title);
 formData.append("file",file);
 
 axios.post(
-"http://localhost:8085/api/materials/upload",
+`${BASE_URL}/api/materials/upload`,   // ✅ FIXED
 formData,
 {
 headers:{
@@ -49,7 +50,6 @@ headers:{
 }
 }
 )
-
 .then(()=>{
 
 alert("Material Uploaded");
@@ -62,7 +62,6 @@ document.getElementById("fileInput").value = "";
 loadMaterials();
 
 })
-
 .catch(err=>{
 console.log(err);
 alert("Upload failed");
@@ -78,13 +77,11 @@ if(!window.confirm("Are you sure you want to delete this material?")){
 return;
 }
 
-axios.delete("http://localhost:8085/api/materials/delete/"+id)
-
+axios.delete(`${BASE_URL}/api/materials/delete/${id}`)   // ✅ FIXED
 .then(()=>{
 alert("Material Deleted");
 loadMaterials();
 })
-
 .catch(err=>{
 console.log(err);
 alert("Delete failed");
@@ -99,7 +96,7 @@ function viewMaterial(fileName){
 const encodedFileName = encodeURIComponent(fileName);
 
 window.open(
-"http://localhost:8085/api/materials/view/"+encodedFileName,
+`${BASE_URL}/api/materials/view/${encodedFileName}`,   // ✅ FIXED
 "_blank"
 );
 
@@ -159,9 +156,7 @@ Upload Notes
 <tr key={m.id}>
 
 <td>{m.id}</td>
-
 <td>{m.title}</td>
-
 <td>{m.fileName}</td>
 
 <td>

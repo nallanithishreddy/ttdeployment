@@ -5,6 +5,9 @@ import "../Auth.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// ✅ BASE URL (UPDATED)
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+
 function AuthPage() {
 
   const [toggle, setToggle] = useState(false);
@@ -44,7 +47,7 @@ function AuthPage() {
     try {
 
       const response = await axios.post(
-        "http://localhost:8085/api/login",
+        `${BASE_URL}/api/login`,   // ✅ FIXED
         loginData
       );
 
@@ -79,7 +82,7 @@ function AuthPage() {
     try {
 
       const response = await axios.post(
-        "http://localhost:8085/api/register",
+        `${BASE_URL}/api/register`,   // ✅ FIXED
         registerData
       );
 
@@ -87,7 +90,6 @@ function AuthPage() {
 
       toast.success("Registration successful. Please login.");
 
-      // reset register form
       setRegisterData({
         username: "",
         email: "",
@@ -95,13 +97,11 @@ function AuthPage() {
         role: "STUDENT"
       });
 
-      // clear login form
       setLoginData({
         email: "",
         password: ""
       });
 
-      // go to login
       setToggle(false);
 
     } catch (error) {
@@ -123,8 +123,6 @@ function AuthPage() {
     <div className="auth-wrapper">
 
       <div className={toggle ? "container active" : "container"}>
-
-        {/* LOGIN FORM */}
 
         <div className="form-box login">
 
@@ -167,9 +165,6 @@ function AuthPage() {
           </p>
 
         </div>
-
-
-        {/* REGISTER FORM */}
 
         <div className="form-box register">
 
@@ -215,10 +210,8 @@ function AuthPage() {
               value={registerData.role}
               onChange={handleRegisterChange}
             >
-
               <option value="STUDENT">Student</option>
               <option value="ADMIN">Admin</option>
-
             </select>
 
           </div>
@@ -244,9 +237,6 @@ function AuthPage() {
 
         </div>
 
-
-        {/* SLIDER PANEL */}
-
         <div className="slider">
 
           <div className="slider-content">
@@ -270,8 +260,6 @@ function AuthPage() {
         </div>
 
       </div>
-
-      {/* TOAST CONTAINER */}
 
       <ToastContainer
         position="top-right"

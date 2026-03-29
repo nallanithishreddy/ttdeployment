@@ -1,112 +1,110 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import StudentNavbar from "./StudentNavbar";
-import "../App.css";
 
-function StudentNotes() {
+function SubjectPage() {
 
-  const [materials, setMaterials] = useState([]);
+  const [subject, setSubject] = useState({
+    subjectName: "",
+    subjectCode: ""
+  });
 
-  useEffect(() => {
+  const [subjects, setSubjects] = useState([]);
+  const [searchName, setSearchName] = useState("");
 
-    const user = localStorage.getItem("user");
+  // ADD SUBJECT
+  function addSubject() {
+    axios.post("http://localhost:2011/api/subjects/add", subject)
+      .then(() => {
+        alert("Subject Added");
+        setSubject({ subjectName: "", subjectCode: "" });
+        getAllSubjects();
+      });
+  }
 
-    if (!user) {
-      window.location.href = "/login";
-      return;
-    }
+  // GET ALL SUBJECTS
+  function getAllSubjects() {
+    axios.get("http://localhost:2011/api/subjects/all")
+      .then(res => setSubjects(res.data));
+  }
 
-    loadMaterials();
+  // SEARCH SUBJECT
+  function searchSubject() {
+    axios.get(`http://localhost:2011/api/subjects/search/${searchName}`)
+      .then(res => setSubjects(res.data));
+  }
 
-  }, []);
-
-  // ================= LOAD =================
-
-  const loadMaterials = async () => {
-    try {
-      const res = await axios.get(
-        "http://localhost:8085/api/materials/all"
-      );
-      setMaterials(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  // ================= VIEW =================
-
-  const viewMaterial = (fileName) => {
-
-    const encodedFileName = encodeURIComponent(fileName);
-
-    window.open(
-      `http://localhost:8085/api/materials/view/${encodedFileName}`,
-      "_blank"
-    );
-  };
+  // DELETE SUBJECT
+  function deleteSubject(id) {
+    axios.delete(`http://localhost:2011/api/subjects/delete/${id}`)
+      .then(() => {
+        alert("Deleted");
+        getAllSubjects();
+      });
+  }
 
   return (
-    <>
-      <StudentNavbar />
+    <div className="dashboard-container">
 
-      <div className="notes-page">
+      <h2>Subject Management</h2>
 
-        <h1 className="notes-title">
-          Study Materials
-        </h1>
+      {/* ADD SUBJECT */}
+      <input
+        type="text"
+        placeholder="Subject Name"
+        value={subject.subjectName}
+        onChange={(e) => setSubject({ ...subject, subjectName: e.target.value })}
+      />
 
-        {/* ===== TABLE ===== */}
+      <input
+        type="text"
+        placeholder="Subject Code"
+        value={subject.subjectCode}
+        onChange={(e) => setSubject({ ...subject, subjectCode: e.target.value })}
+      />
 
-        <div className="notes-table-box">
+      <button onClick={addSubject}>Add Subject</button>
+      <button onClick={getAllSubjects}>All Subjects</button>
 
-          <table className="notes-table">
+      <hr />
 
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>File</th>
-                <th>View</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              {materials.length > 0 ? (
-                materials.map(m => (
-                  <tr key={m.id}>
-
-                    <td>{m.id}</td>
-                    <td>{m.title}</td>
-                    <td>{m.fileName}</td>
-
-                    <td>
-                      <button
-                        onClick={() => viewMaterial(m.fileName)}
-                      >
-                        View
-                      </button>
-                    </td>
-
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="4" style={{ textAlign: "center" }}>
-                    No Study Materials Available
-                  </td>
-                </tr>
-              )}
-
-            </tbody>
-
-          </table>
-
-        </div>
-
+      {/* SEARCH SUBJECT */}
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search Subject Name"
+          onChange={(e) => setSearchName(e.target.value)}
+        />
+        <button onClick={searchSubject}>Search</button>
       </div>
-    </>
+
+      {/* SUBJECT TABLE */}
+      <table className="users-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Subject Name</th>
+            <th>Subject Code</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {subjects.map((s) => (
+            <tr key={s.id}>
+              <td>{s.id}</td>
+              <td>{s.subjectName}</td>
+              <td>{s.subjectCode}</td>
+              <td>
+                <button onClick={() => deleteSubject(s.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+
+      </table>
+
+    </div>
   );
 }
 
-export default StudentNotes;
+export default SubjectPage;
