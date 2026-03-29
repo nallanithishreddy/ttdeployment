@@ -1,0 +1,1229 @@
+2026-02-01 11:58:57.912199+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 11:59:49.525100+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 11:59:53.486463+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:00:46.332020+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:00:53.301616+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:01:06.190229+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:01:21.234022+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:01:25.128938+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:02:11.007041+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found; SQL statement:
+INSERT INTO students (roll_no, name, branch, year, email)
+VALUES ('23EG105K37', 'Nithish', 'CSE', 3, 'student@gmail.com') [42102-240]
+2026-02-01 12:03:07.021139+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.[*]year from students s1_0 where s1_0.email=?"; expected "identifier"; SQL statement:
+select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.year from students s1_0 where s1_0.email=? [42001-240]
+2026-02-01 12:04:12.073636+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.[*]year from students s1_0 where s1_0.email=?"; expected "identifier"; SQL statement:
+select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.year from students s1_0 where s1_0.email=? [42001-240]
+2026-02-01 12:04:56.958706+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found; SQL statement:
+INSERT INTO students (roll_no, name, branch, year, email)
+VALUES ('23EG105K37', 'Nithish', 'CSE', 3, 'student@gmail.com') [42102-240]
+2026-02-01 12:09:26.255591+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:09:54.669325+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:10:09.269649+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:22:43.843216+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:23:17.200298+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.[*]year from students s1_0 where s1_0.email=?"; expected "identifier"; SQL statement:
+select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.year from students s1_0 where s1_0.email=? [42001-240]
+2026-02-01 12:26:57.219716+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:27:58.798847+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:28:53.880999+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-01 12:29:11.891990+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.[*]year from students s1_0 where s1_0.email=?"; expected "identifier"; SQL statement:
+select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.year from students s1_0 where s1_0.email=? [42001-240]
+2026-02-01 12:29:35.631912+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.[*]year from students s1_0 where s1_0.email=?"; expected "identifier"; SQL statement:
+select s1_0.roll_no,s1_0.branch,s1_0.email,s1_0.name,s1_0.year from students s1_0 where s1_0.email=? [42001-240]
+2026-02-01 12:40:23.819687+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), [*]year integer not null, primary key (roll_no))"; expected "identifier"; SQL statement:
+create table students (roll_no varchar(255) not null, branch varchar(255), email varchar(255), name varchar(255), year integer not null, primary key (roll_no)) [42001-240]
+2026-02-02 21:56:52.473414+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:26:54.185091+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:27:22.762432+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:28:00.526141+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:28:25.991401+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:51:37.762725+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:52:04.140122+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:52:23.457070+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-02 22:52:47.734278+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:42:53.813581+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:48:36.243592+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:49:22.415111+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:49:41.665624+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:49:55.808163+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:59:05.668034+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:59:19.132556+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 20:59:46.613454+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:00:45.259646+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:01:03.815067+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:01:23.245374+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:03:21.802667+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:06:53.760885+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table students (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table students (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:08:00.889940+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:08:32.983925+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:08:49.290586+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:09:10.593060+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:09:20.149808+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:09:40.255633+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:09:59.979660+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:10:31.465812+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:11:08.424534+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:22:14.425091+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:32:33.117899+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:38:06.587609+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:38:18.403448+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:38:21.574762+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:39:47.382897+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:39:51.054393+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:50:32.054615+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:51:52.849593+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-03 21:52:10.611213+05:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:803)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 139 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 133 more
+2026-02-03 21:52:12.580869+05:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:803)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 143 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 137 more
+2026-02-03 21:52:16.109463+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table student_info (\000d\000a        roll_no varchar(255) not null,\000d\000a        branch varchar(255),\000d\000a        email varchar(255),\000d\000a        name varchar(255),\000d\000a        [*]year integer not null,\000d\000a        primary key (roll_no)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table student_info (
+        roll_no varchar(255) not null,
+        branch varchar(255),
+        email varchar(255),
+        name varchar(255),
+        year integer not null,
+        primary key (roll_no)
+    ) [42001-240]
+2026-02-05 21:13:42 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 56 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	... 50 more
+2026-02-05 21:13:42 database: opening C:/Users/nithi/Documents/User_Authentication/data/userdb
+org.h2.message.DbException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:161)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 48 more
+2026-02-05 21:13:56 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 56 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	... 50 more
+2026-02-05 21:13:56 database: opening C:/Users/nithi/Documents/User_Authentication/data/userdb
+org.h2.message.DbException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:161)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 48 more
+2026-02-05 21:25:19 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 56 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	... 50 more
+2026-02-05 21:25:19 database: opening C:/Users/nithi/Documents/User_Authentication/data/userdb
+org.h2.message.DbException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:161)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/nithi/Documents/User_Authentication/data/userdb.mv.db" [90048-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 3 is larger than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 48 more
