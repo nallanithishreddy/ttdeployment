@@ -17,7 +17,6 @@ public class AttendancePercentageService {
 
     public double calculateAttendancePercentage(String studentName) {
 
-        // Fetch all records and filter by student name
         List<Attendance> records = attendanceRepo.findAll()
                 .stream()
                 .filter(a -> studentName.equalsIgnoreCase(a.getStudentName()))
