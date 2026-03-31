@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // ✅ BASE URL (UPDATED)
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
 
 function AuthPage() {
 

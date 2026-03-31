@@ -3,7 +3,7 @@ import axios from "axios";
 import "../App.css";
 
 // ✅ ADD THIS
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
 
 function CoursePage() {
 

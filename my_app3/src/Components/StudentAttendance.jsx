@@ -32,7 +32,7 @@ function StudentAttendance() {
 
   const loadSubjects = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      const res = await axios.get("https://ttdeployment-l4ag.onrender.com/api/subjects/all");
       setSubjects(res.data || []);
     } catch (err) {
       console.log(err);
@@ -42,7 +42,7 @@ function StudentAttendance() {
   const fetchAttendance = async (username) => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/attendance/student/${username}`
+        `https://ttdeployment-l4ag.onrender.com/api/attendance/student/${username}`
       );
       setAttendance(res.data || []);
     } catch (err) {

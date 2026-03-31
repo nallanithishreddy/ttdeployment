@@ -61,7 +61,7 @@ function StudentDashboard() {
 
   const loadSubjects = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      const res = await axios.get("https://ttdeployment-l4ag.onrender.com/api/subjects/all");
       setSubjects(res.data || []);
     } catch (err) {
       console.log(err);
@@ -71,7 +71,7 @@ function StudentDashboard() {
   const fetchMarks = async (username) => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/marks/student/username/${username}`
+        `https://ttdeployment-l4ag.onrender.com/api/marks/student/username/${username}`
       );
       setMarks(res.data || []);
     } catch (err) {
@@ -82,7 +82,7 @@ function StudentDashboard() {
   const fetchAttendance = async (username) => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/attendance/student/${username}`
+        `https://ttdeployment-l4ag.onrender.com/api/attendance/student/${username}`
       );
       setAttendance(res.data || []);
     } catch (err) {
@@ -92,7 +92,7 @@ function StudentDashboard() {
 
   const loadAnnouncements = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/notes/all");
+      const res = await axios.get("https://ttdeployment-l4ag.onrender.com/api/notes/all");
       setAnnouncements(res.data || []);
     } catch (err) {
       console.log(err);

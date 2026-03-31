@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 // ✅ ADD THIS
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
 
 function Course() {
   const [course, setCourse] = useState({ courseName: "", courseCode: "" });

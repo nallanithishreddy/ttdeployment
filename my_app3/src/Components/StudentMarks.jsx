@@ -32,7 +32,7 @@ function StudentMarks() {
 
   const loadSubjects = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      const res = await axios.get("https://ttdeployment-l4ag.onrender.com/api/subjects/all");
       setSubjects(res.data || []);
     } catch (err) {
       console.log(err);
@@ -42,7 +42,7 @@ function StudentMarks() {
   const fetchMarks = async (username) => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/marks/student/username/${username}`
+        `https://ttdeployment-l4ag.onrender.com/api/marks/student/username/${username}`
       );
       setMarks(res.data || []);
     } catch (err) {
