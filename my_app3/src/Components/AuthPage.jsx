@@ -42,12 +42,14 @@ function AuthPage() {
 
   // ================= LOGIN =================
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+
+    if (e) e.preventDefault(); // ✅ FIX ADDED
 
     try {
 
       const response = await axios.post(
-        `${BASE_URL}/api/login`,   // ✅ FIXED
+        `${BASE_URL}/api/login`,
         loginData
       );
 
@@ -77,12 +79,14 @@ function AuthPage() {
 
   // ================= REGISTER =================
 
-  const handleRegister = async () => {
+  const handleRegister = async (e) => {
+
+    if (e) e.preventDefault(); // ✅ FIX ADDED
 
     try {
 
       const response = await axios.post(
-        `${BASE_URL}/api/register`,   // ✅ FIXED
+        `${BASE_URL}/api/register`,
         registerData
       );
 
