@@ -7,7 +7,10 @@ import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://ttdeployment-lemon.vercel.app"
+})
 @RequestMapping("/api")
 public class UserController {
 
