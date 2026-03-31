@@ -3,19 +3,16 @@ import axios from "axios";
 import StudentNavbar from "./StudentNavbar";
 import "../App.css";
 
-// ✅ ADD THIS
-const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
-
-function StudentMarks() {
+function StudentAttendance() {
 
   const [subjects, setSubjects] = useState([]);
-  const [marks, setMarks] = useState([]);
+  const [attendance, setAttendance] = useState([]);
 
   const [subjectStats, setSubjectStats] = useState([]);
-  const [cgpa, setCgpa] = useState(0);
+  const [overallPercent, setOverallPercent] = useState(0);
 
   const [selectedSubject, setSelectedSubject] = useState(null);
-  const [filteredMarks, setFilteredMarks] = useState([]);
+  const [filteredRecords, setFilteredRecords] = useState([]);
 
   useEffect(() => {
 
@@ -27,60 +24,95 @@ function StudentMarks() {
     }
 
     loadSubjects();
-    fetchMarks(user.username);
+    fetchAttendance(user.username);
 
   }, []);
 
+  // ================= FETCH =================
+
   const loadSubjects = async () => {
-    const res = await axios.get(`${BASE_URL}/api/subjects/all`);   // ✅ FIXED
-    setSubjects(res.data);
+    try {
+      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      setSubjects(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  const fetchMarks = async (username) => {
-    const res = await axios.get(
-      `${BASE_URL}/api/marks/student/username/${username}`   // ✅ FIXED
-    );
-    setMarks(res.data);
+  const fetchAttendance = async (username) => {
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/attendance/student/${username}`
+      );
+      setAttendance(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  // ================= CALCULATE =================
 
   useEffect(() => {
     if (subjects.length === 0) return;
     calculateStats();
-  }, [subjects, marks]);
+  }, [subjects, attendance]);
 
   const calculateStats = () => {
 
-    let sum = 0;
-    marks.forEach(m => sum += (m.marks || 0));
+    // ===== OVERALL =====
+    const total = attendance.length;
 
-    const avg = marks.length === 0 ? 0 : (sum / marks.length).toFixed(2);
-    setCgpa(avg);
+    const present = attendance.filter(
+      a => a.status && a.status.toLowerCase().trim() === "present"
+    ).length;
 
+    const overall =
+      total === 0 ? 0 : ((present / total) * 100).toFixed(2);
+
+    setOverallPercent(overall);
+
+    // ===== SUBJECT-WISE =====
     const stats = subjects.map(sub => {
 
-      const records = marks.filter(m => m.subjectId === sub.id);
+      const records = attendance.filter(
+        a =>
+          a.subjectName?.toLowerCase().trim() ===
+          sub.subjectName?.toLowerCase().trim()
+      );
 
-      let totalMarks = 0;
-      records.forEach(r => totalMarks += (r.marks || 0));
+      const totalSub = records.length;
 
-      const avgMarks =
-        records.length === 0 ? 0 : (totalMarks / records.length).toFixed(2);
+      const presentSub = records.filter(
+        a => a.status && a.status.toLowerCase().trim() === "present"
+      ).length;
+
+      const percent =
+        totalSub === 0
+          ? 0
+          : ((presentSub / totalSub) * 100).toFixed(2);
 
       return {
         subject: sub.subjectName,
-        avg: avgMarks
+        percent: percent
       };
     });
 
     setSubjectStats(stats);
   };
 
-  const handleClick = (subject, subjectId) => {
+  // ================= CLICK =================
+
+  const handleClick = (subject) => {
 
     setSelectedSubject(subject);
 
-    const filtered = marks.filter(m => m.subjectId === subjectId);
-    setFilteredMarks(filtered);
+    const filtered = attendance.filter(
+      a =>
+        a.subjectName?.toLowerCase().trim() ===
+        subject?.toLowerCase().trim()
+    );
+
+    setFilteredRecords(filtered);
   };
 
   return (
@@ -89,15 +121,17 @@ function StudentMarks() {
 
       <div className="subjects-page">
 
-        <h1 className="subject-title">My Marks</h1>
+        <h1 className="subject-title">My Attendance</h1>
 
+        {/* ===== OVERALL ===== */}
         <div className="subject-table-box" style={{ marginBottom: "20px" }}>
-          <h3 style={{ textAlign: "center" }}>Overall CGPA / Average</h3>
-          <h2 style={{ textAlign: "center", color: "#22c55e" }}>
-            {cgpa}
+          <h3 style={{ textAlign: "center" }}>Overall Attendance</h3>
+          <h2 style={{ textAlign: "center", color: "#6366f1" }}>
+            {overallPercent}%
           </h2>
         </div>
 
+        {/* ===== TABLE ===== */}
         <div className="subject-table-box">
 
           <table className="subjects-table">
@@ -105,29 +139,28 @@ function StudentMarks() {
             <thead>
               <tr>
                 <th>Subject</th>
-                <th>Average Marks</th>
+                <th>Attendance %</th>
               </tr>
             </thead>
 
             <tbody>
 
-              {subjects.map((sub, i) => {
-
-                const stat = subjectStats.find(
-                  s => s.subject === sub.subjectName
-                );
-
-                return (
+              {subjectStats.length === 0 ? (
+                <tr>
+                  <td colSpan="2">No Data</td>
+                </tr>
+              ) : (
+                subjectStats.map((s, i) => (
                   <tr
                     key={i}
-                    onClick={() => handleClick(sub.subjectName, sub.id)}
+                    onClick={() => handleClick(s.subject)}
                     style={{ cursor: "pointer" }}
                   >
-                    <td>{sub.subjectName}</td>
-                    <td>{stat ? stat.avg : 0}</td>
+                    <td>{s.subject}</td>
+                    <td>{s.percent}%</td>
                   </tr>
-                );
-              })}
+                ))
+              )}
 
             </tbody>
 
@@ -135,31 +168,36 @@ function StudentMarks() {
 
         </div>
 
+        {/* ===== DETAILS ===== */}
         {selectedSubject && (
           <div className="subject-table-box" style={{ marginTop: "25px" }}>
 
-            <h3>{selectedSubject} - Exam Details</h3>
+            <h3>{selectedSubject} - Attendance Details</h3>
 
             <table className="subjects-table">
 
               <thead>
                 <tr>
-                  <th>Exam Type</th>
-                  <th>Marks</th>
+                  <th>Date</th>
+                  <th>Status</th>
                 </tr>
               </thead>
 
               <tbody>
 
-                {filteredMarks.length === 0 ? (
+                {filteredRecords.length === 0 ? (
                   <tr>
-                    <td colSpan="2">No Marks Available</td>
+                    <td colSpan="2">No Records</td>
                   </tr>
                 ) : (
-                  filteredMarks.map((m, i) => (
+                  filteredRecords.map((a, i) => (
                     <tr key={i}>
-                      <td>{m.examType}</td>
-                      <td>{m.marks}</td>
+                      <td>{a.date}</td>
+                      <td>
+                        {a.status?.toLowerCase() === "present"
+                          ? "✅ Present"
+                          : "❌ Absent"}
+                      </td>
                     </tr>
                   ))
                 )}
@@ -176,4 +214,4 @@ function StudentMarks() {
   );
 }
 
-export default StudentMarks;
+export default StudentAttendance;

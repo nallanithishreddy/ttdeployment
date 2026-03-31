@@ -15,12 +15,9 @@ import {
 
 import "../App.css";
 
-const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
-
 function StudentDashboard() {
 
   const [user, setUser] = useState(null);
-
   const [subjects, setSubjects] = useState([]);
   const [marks, setMarks] = useState([]);
   const [attendance, setAttendance] = useState([]);
@@ -33,7 +30,7 @@ function StudentDashboard() {
   const [attendanceGraph, setAttendanceGraph] = useState([]);
   const [lowAttendanceSubjects, setLowAttendanceSubjects] = useState([]);
 
-  const colors = ["#6366f1", "#22c55e", "#3b82f6", "#f59e0b", "#ef4444"];
+  const colors = ["#6366f1","#22c55e","#3b82f6","#f59e0b","#ef4444"];
 
   useEffect(() => {
 
@@ -60,34 +57,56 @@ function StudentDashboard() {
     }
   }, [subjects, marks, attendance]);
 
+  // ================= FETCH =================
+
   const loadSubjects = async () => {
-    const res = await axios.get(`${BASE_URL}/api/subjects/all`);
-    setSubjects(res.data || []);
+    try {
+      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      setSubjects(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const fetchMarks = async (username) => {
-    const res = await axios.get(
-      `${BASE_URL}/api/marks/student/username/${username}`
-    );
-    setMarks(res.data || []);
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/marks/student/username/${username}`
+      );
+      setMarks(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const fetchAttendance = async (username) => {
-    const res = await axios.get(
-      `${BASE_URL}/api/attendance/student/${username}`
-    );
-    setAttendance(res.data || []);
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/attendance/student/${username}`
+      );
+      setAttendance(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const loadAnnouncements = async () => {
-    const res = await axios.get(`${BASE_URL}/api/notes/all`);
-    setAnnouncements(res.data || []);
+    try {
+      const res = await axios.get("http://localhost:8080/api/notes/all");
+      setAnnouncements(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  // ================= MARKS =================
 
   const calculateMarks = () => {
 
     let sum = 0;
-    marks.forEach(m => sum += (m.marks || 0));
+    marks.forEach(m => {
+      sum += (m.marks || 0);
+    });
 
     const avg = marks.length === 0 ? 0 : (sum / marks.length);
 
@@ -99,7 +118,9 @@ function StudentDashboard() {
       const records = marks.filter(m => m.subjectId === sub.id);
 
       let total = 0;
-      records.forEach(r => total += (r.marks || 0));
+      records.forEach(r => {
+        total += (r.marks || 0);
+      });
 
       const avgMarks =
         records.length === 0 ? 0 : (total / records.length).toFixed(2);
@@ -112,6 +133,8 @@ function StudentDashboard() {
 
     setMarksGraph(graph);
   };
+
+  // ================= ATTENDANCE =================
 
   const calculateAttendance = () => {
 
@@ -169,6 +192,7 @@ function StudentDashboard() {
           <h1>Student Dashboard</h1>
         </div>
 
+        {/* STATS */}
         <div className="stats-row">
 
           <div className="stat-box">
@@ -188,27 +212,81 @@ function StudentDashboard() {
 
         </div>
 
+        {/* ANNOUNCEMENTS + LOW ATTENDANCE */}
         <div className="graphs-row">
 
           <div className="graph-box">
             <h3>📢 Announcements</h3>
 
-            {announcements.slice(-5).reverse().map(a => (
-              <div key={a.id}>
-                <h4>{a.title}</h4>
-                <p>{a.message}</p>
-              </div>
-            ))}
+            <div style={{ maxHeight: "200px", overflowY: "auto" }}>
+              {announcements.length === 0 ? (
+                <p>No announcements</p>
+              ) : (
+                announcements.slice(-5).reverse().map(a => (
+                  <div key={a.id} className="announcement-item">
+                    <h4>{a.title}</h4>
+                    <p>{a.message}</p>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
 
           <div className="graph-box">
             <h3 style={{ color: "red" }}>⚠ Low Attendance</h3>
 
-            {lowAttendanceSubjects.map((l, i) => (
-              <p key={i}>
-                {l.subject} - {l.percent}%
-              </p>
-            ))}
+            {lowAttendanceSubjects.length === 0 ? (
+              <p>All Good ✅</p>
+            ) : (
+              lowAttendanceSubjects.map((l, i) => (
+                <p key={i} style={{ color: "red" }}>
+                  {l.subject} - {l.percent}%
+                </p>
+              ))
+            )}
+
+          </div>
+
+        </div>
+
+        {/* GRAPHS */}
+        <div className="graphs-row">
+
+          <div className="graph-box">
+            <h3>Subject-wise Marks</h3>
+
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={marksGraph}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="subject" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="marks">
+                  {marksGraph.map((_, i) => (
+                    <Cell key={i} fill={colors[i % colors.length]} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+
+          </div>
+
+          <div className="graph-box">
+            <h3>Subject-wise Attendance</h3>
+
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={attendanceGraph}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="subject" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="percent">
+                  {attendanceGraph.map((_, i) => (
+                    <Cell key={i} fill={colors[i % colors.length]} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
 
           </div>
 

@@ -3,22 +3,33 @@ import axios from "axios";
 import StudentNavbar from "./StudentNavbar";
 import "../App.css";
 
-// ✅ BASE URL
-const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
-
 function StudentSubjects() {
 
   const [subjects, setSubjects] = useState([]);
 
   useEffect(() => {
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+      window.location.href = "/login";
+      return;
+    }
+
     loadSubjects();
+
   }, []);
 
-  function loadSubjects() {
-    axios.get(`${BASE_URL}/api/subjects/all`)   // ✅ FIXED
-      .then(res => setSubjects(res.data))
-      .catch(err => console.log(err));
-  }
+  // ================= FETCH =================
+
+  const loadSubjects = async () => {
+    try {
+      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      setSubjects(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -26,9 +37,7 @@ function StudentSubjects() {
 
       <div className="subjects-page">
 
-        <h1 className="subject-title">
-          My Subjects
-        </h1>
+        <h1 className="subject-title">My Subjects</h1>
 
         <div className="subject-table-box">
 
@@ -36,30 +45,24 @@ function StudentSubjects() {
 
             <thead>
               <tr>
-                <th>ID</th>
                 <th>Subject Name</th>
                 <th>Subject Code</th>
-                <th>Course</th>
               </tr>
             </thead>
 
             <tbody>
 
-              {subjects.length > 0 ? (
-                subjects.map(s => (
-                  <tr key={s.id}>
-                    <td>{s.id}</td>
-                    <td>{s.subjectName}</td>
-                    <td>{s.subjectCode}</td>
-                    <td>{s.courseName}</td>
+              {subjects.length === 0 ? (
+                <tr>
+                  <td colSpan="2">No Subjects Available</td>
+                </tr>
+              ) : (
+                subjects.map((sub, i) => (
+                  <tr key={i}>
+                    <td>{sub.subjectName}</td>
+                    <td>{sub.subjectCode}</td>
                   </tr>
                 ))
-              ) : (
-                <tr>
-                  <td colSpan="4" style={{ textAlign: "center" }}>
-                    No subjects available
-                  </td>
-                </tr>
               )}
 
             </tbody>

@@ -19,7 +19,7 @@ Legend
 import "../App.css";
 
 // ✅ ADD THIS (VERY IMPORTANT)
-const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
+const BASE_URL = "http://localhost:8080";
 
 function AdminDashboard(){
 

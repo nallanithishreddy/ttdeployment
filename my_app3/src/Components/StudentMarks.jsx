@@ -3,9 +3,6 @@ import axios from "axios";
 import StudentNavbar from "./StudentNavbar";
 import "../App.css";
 
-// ✅ ADD THIS
-const BASE_URL = "https://ttdeployment-l4ag.onrender.com";
-
 function StudentMarks() {
 
   const [subjects, setSubjects] = useState([]);
@@ -31,17 +28,29 @@ function StudentMarks() {
 
   }, []);
 
+  // ================= FETCH =================
+
   const loadSubjects = async () => {
-    const res = await axios.get(`${BASE_URL}/api/subjects/all`);   // ✅ FIXED
-    setSubjects(res.data);
+    try {
+      const res = await axios.get("http://localhost:8080/api/subjects/all");
+      setSubjects(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const fetchMarks = async (username) => {
-    const res = await axios.get(
-      `${BASE_URL}/api/marks/student/username/${username}`   // ✅ FIXED
-    );
-    setMarks(res.data);
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/marks/student/username/${username}`
+      );
+      setMarks(res.data || []);
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  // ================= CALCULATE =================
 
   useEffect(() => {
     if (subjects.length === 0) return;
@@ -50,21 +59,36 @@ function StudentMarks() {
 
   const calculateStats = () => {
 
+    // ===== CGPA (OUT OF 10) =====
+    let total = marks.length;
     let sum = 0;
-    marks.forEach(m => sum += (m.marks || 0));
 
-    const avg = marks.length === 0 ? 0 : (sum / marks.length).toFixed(2);
-    setCgpa(avg);
+    marks.forEach(m => {
+      sum += (m.marks || 0);
+    });
 
+    const avg = total === 0 ? 0 : (sum / total);
+
+    // ✅ CONVERT TO CGPA
+    const cgpaValue = (avg / 10).toFixed(2);
+    setCgpa(cgpaValue);
+
+    // ===== SUBJECT-WISE =====
     const stats = subjects.map(sub => {
 
-      const records = marks.filter(m => m.subjectId === sub.id);
+      const records = marks.filter(
+        m => m.subjectId === sub.id
+      );
 
       let totalMarks = 0;
-      records.forEach(r => totalMarks += (r.marks || 0));
+      records.forEach(r => {
+        totalMarks += (r.marks || 0);
+      });
 
       const avgMarks =
-        records.length === 0 ? 0 : (totalMarks / records.length).toFixed(2);
+        records.length === 0
+          ? 0
+          : (totalMarks / records.length).toFixed(2);
 
       return {
         subject: sub.subjectName,
@@ -75,11 +99,16 @@ function StudentMarks() {
     setSubjectStats(stats);
   };
 
+  // ================= CLICK =================
+
   const handleClick = (subject, subjectId) => {
 
     setSelectedSubject(subject);
 
-    const filtered = marks.filter(m => m.subjectId === subjectId);
+    const filtered = marks.filter(
+      m => m.subjectId === subjectId
+    );
+
     setFilteredMarks(filtered);
   };
 
@@ -91,13 +120,15 @@ function StudentMarks() {
 
         <h1 className="subject-title">My Marks</h1>
 
+        {/* ===== CGPA CARD ===== */}
         <div className="subject-table-box" style={{ marginBottom: "20px" }}>
-          <h3 style={{ textAlign: "center" }}>Overall CGPA / Average</h3>
+          <h3 style={{ textAlign: "center" }}>CGPA</h3>
           <h2 style={{ textAlign: "center", color: "#22c55e" }}>
             {cgpa}
           </h2>
         </div>
 
+        {/* ===== SUBJECT TABLE ===== */}
         <div className="subject-table-box">
 
           <table className="subjects-table">
@@ -111,23 +142,29 @@ function StudentMarks() {
 
             <tbody>
 
-              {subjects.map((sub, i) => {
+              {subjects.length === 0 ? (
+                <tr>
+                  <td colSpan="2">No Subjects</td>
+                </tr>
+              ) : (
+                subjects.map((sub, i) => {
 
-                const stat = subjectStats.find(
-                  s => s.subject === sub.subjectName
-                );
+                  const stat = subjectStats.find(
+                    s => s.subject === sub.subjectName
+                  );
 
-                return (
-                  <tr
-                    key={i}
-                    onClick={() => handleClick(sub.subjectName, sub.id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <td>{sub.subjectName}</td>
-                    <td>{stat ? stat.avg : 0}</td>
-                  </tr>
-                );
-              })}
+                  return (
+                    <tr
+                      key={i}
+                      onClick={() => handleClick(sub.subjectName, sub.id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <td>{sub.subjectName}</td>
+                      <td>{stat ? stat.avg : 0}</td>
+                    </tr>
+                  );
+                })
+              )}
 
             </tbody>
 
@@ -135,6 +172,7 @@ function StudentMarks() {
 
         </div>
 
+        {/* ===== DETAILS ===== */}
         {selectedSubject && (
           <div className="subject-table-box" style={{ marginTop: "25px" }}>
 

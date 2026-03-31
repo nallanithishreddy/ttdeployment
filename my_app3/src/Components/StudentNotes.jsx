@@ -1,110 +1,114 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import StudentNavbar from "./StudentNavbar";
+import "../App.css";
 
-function SubjectPage() {
+const BASE_URL = "http://localhost:8080";
 
-  const [subject, setSubject] = useState({
-    subjectName: "",
-    subjectCode: ""
-  });
+function StudentNotes() {
 
-  const [subjects, setSubjects] = useState([]);
-  const [searchName, setSearchName] = useState("");
+  const [materials, setMaterials] = useState([]);
 
-  // ADD SUBJECT
-  function addSubject() {
-    axios.post("http://localhost:2011/api/subjects/add", subject)
-      .then(() => {
-        alert("Subject Added");
-        setSubject({ subjectName: "", subjectCode: "" });
-        getAllSubjects();
-      });
+  useEffect(() => {
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+      window.location.href = "/login";
+      return;
+    }
+
+    loadMaterials();
+
+  }, []);
+
+  // ================= LOAD MATERIALS =================
+
+  function loadMaterials() {
+
+    axios.get(`${BASE_URL}/api/materials/all`)
+      .then(res => {
+        setMaterials(res.data || []);
+      })
+      .catch(err => console.log(err));
   }
 
-  // GET ALL SUBJECTS
-  function getAllSubjects() {
-    axios.get("http://localhost:2011/api/subjects/all")
-      .then(res => setSubjects(res.data));
-  }
+  // ================= VIEW MATERIAL =================
 
-  // SEARCH SUBJECT
-  function searchSubject() {
-    axios.get(`http://localhost:2011/api/subjects/search/${searchName}`)
-      .then(res => setSubjects(res.data));
-  }
+  function viewMaterial(fileName) {
 
-  // DELETE SUBJECT
-  function deleteSubject(id) {
-    axios.delete(`http://localhost:2011/api/subjects/delete/${id}`)
-      .then(() => {
-        alert("Deleted");
-        getAllSubjects();
-      });
+    const encodedFileName = encodeURIComponent(fileName);
+
+    window.open(
+      `${BASE_URL}/api/materials/view/${encodedFileName}`,
+      "_blank"
+    );
   }
 
   return (
-    <div className="dashboard-container">
+    <>
+      <StudentNavbar />
 
-      <h2>Subject Management</h2>
+      <div className="notes-page">
 
-      {/* ADD SUBJECT */}
-      <input
-        type="text"
-        placeholder="Subject Name"
-        value={subject.subjectName}
-        onChange={(e) => setSubject({ ...subject, subjectName: e.target.value })}
-      />
+        <h1 className="notes-title">
+          Study Materials
+        </h1>
 
-      <input
-        type="text"
-        placeholder="Subject Code"
-        value={subject.subjectCode}
-        onChange={(e) => setSubject({ ...subject, subjectCode: e.target.value })}
-      />
+        <div className="notes-table-box">
 
-      <button onClick={addSubject}>Add Subject</button>
-      <button onClick={getAllSubjects}>All Subjects</button>
+          <table className="notes-table">
 
-      <hr />
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>File</th>
+                <th>Action</th>
+              </tr>
+            </thead>
 
-      {/* SEARCH SUBJECT */}
-      <div className="search-box">
-        <input
-          type="text"
-          placeholder="Search Subject Name"
-          onChange={(e) => setSearchName(e.target.value)}
-        />
-        <button onClick={searchSubject}>Search</button>
+            <tbody>
+
+              {materials.length === 0 ? (
+                <tr>
+                  <td colSpan="4">No Study Materials Available</td>
+                </tr>
+              ) : (
+                materials.map(m => (
+
+                  <tr key={m.id}>
+
+                    <td>{m.id}</td>
+
+                    <td>{m.title}</td>
+
+                    <td>{m.fileName}</td>
+
+                    <td>
+
+                      <button
+                        onClick={() => viewMaterial(m.fileName)}
+                      >
+                        View
+                      </button>
+
+                    </td>
+
+                  </tr>
+
+                ))
+              )}
+
+            </tbody>
+
+          </table>
+
+        </div>
+
       </div>
-
-      {/* SUBJECT TABLE */}
-      <table className="users-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Subject Name</th>
-            <th>Subject Code</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {subjects.map((s) => (
-            <tr key={s.id}>
-              <td>{s.id}</td>
-              <td>{s.subjectName}</td>
-              <td>{s.subjectCode}</td>
-              <td>
-                <button onClick={() => deleteSubject(s.id)}>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-
-      </table>
-
-    </div>
+    </>
   );
 }
 
-export default SubjectPage;
+export default StudentNotes;
